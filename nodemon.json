@@ -1,0 +1,12 @@
+{
+    "exceMap": {
+        "js": "node",
+        "jsx": "./node_modules/.bin/jsx \"$1\" | node"
+    },
+    "ext": "js jsx handlebars",
+    "ignore": [
+        "node_modules/**/*.js",
+        "public/js/**",
+        "lib/api/**"
+    ]
+}
