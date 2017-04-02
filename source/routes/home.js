@@ -26,4 +26,18 @@ router.get('/:id?', (req, res) => {
     });
 });
 
+router.get('/items/:id', (req, res) => {
+    const id = req.params.id || defaultKey;
+
+    homeService.getItemData(id).then((data) => {
+        const component = components.render(components.componentKeys.items, data);
+
+        const html = templates.items({ data: component });
+
+        res.send(html)
+            .end();
+    });
+});
+
+
 module.exports = router;

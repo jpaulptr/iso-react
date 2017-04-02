@@ -17,6 +17,22 @@ const dataSet = [
 ];
 
 
+const dataItemsSet = [
+    { 
+        item: 'Lemmons',
+        price: .99
+    },
+    { 
+        item: 'Limes',
+        price: .59
+    }
+];
+
+
 exports.getData = (key) => {
     return Promise.resolve(dataSet[key]);
+};
+
+exports.getItemData = (key) => {
+    return Promise.resolve(dataItemsSet[key]);
 };

@@ -2,14 +2,20 @@
 
 const React = require('react');
 
-const index = React.createClass({
+class index extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-    render: () => {
-
+    render() {
         return (
-            <h1 >hi123</h1>
+            <div>
+                <h1 >{this.props.item}</h1>
+                <h2>{this.props.price}</h2>
+            </div>
         );
     }
-});
+};
 
 module.exports = index;
