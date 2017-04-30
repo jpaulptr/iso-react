@@ -1,8 +1,7 @@
-'use strict';
-
 const React = require('react');
+const PropTypes = require('prop-types')
 
-class index extends React.Component {
+class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -21,11 +20,18 @@ class index extends React.Component {
     }
 }
 
-index.propTypes = {
-    title: React.PropTypes.string,
-    lastName: React.PropTypes.string,
-    firstName: React.PropTypes.string,
-    bio: React.PropTypes.string
+Index.propTypes = {
+    title: PropTypes.string,
+    lastName: PropTypes.string,
+    firstName: PropTypes.string,
+    bio: PropTypes.string
 };
 
-module.exports = index;
+Index.defaultProps = {
+    title: '',
+    lastName: '',
+    firstName: '',
+    bio: '',
+};
+
+module.exports = Index;

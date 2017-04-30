@@ -1,6 +1,3 @@
-'use strict';
-
-// React 
 require('node-jsx').install({
     harmony: true,
     extension: '.jsx'
